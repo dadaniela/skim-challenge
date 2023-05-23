@@ -7,10 +7,10 @@
 :root {
     font-family: "Montserrat";
     font-size: 10px;
-    --primary-color: #1C6D7D;
-    --accent-color: #FF8126;
-    --bg-light: #abb8c3;
-    --bg-dark: #263133;
+    --light-color: #fffbf0;
+    --dark-color: #121212;
+    --accent-blue: #1f77dc;
+    --accent-pink: #b848ac;
 }
 
 header {
@@ -19,16 +19,15 @@ header {
     font-weight: 700;
     padding: 0 2rem;
     border-bottom: black solid 2px;
-    background: #fffbf0;
-    color: #191919;
+    background: var(--light-color);
+    color:var(--dark-color);
 }
 
 main {
     width: 100vw;
     height: 100vh;
     font-size: 1.6rem;
-    font-family: "Montserrat", sans-serif;
-    background: var(--bg-dark);
+    background: var(--dark-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -36,8 +35,6 @@ main {
 }
 
 .container {
-    /* min-width: 100%; */
-    /* min-height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,70 +46,119 @@ main {
 .factorial {
     grid-area: factorial;
     border-right: black solid 2px;
-    background: #121212;
+    background: var(--dark-color);
 }
 
 .fizzbuzz {
     grid-area: fizzbuzz;
-    background: #fffbf0;
-}
-
-p {
-    font-weight: 300;
-    color: var(--primary-color);
+    background: var(--light-color);
 }
 
 form {
     width: clamp(15rem, 35vw, 40rem);
-    height: clamp(15rem, 40vh, 40rem);
+    height: clamp(20rem, 40vh, 40rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.6rem;
-    border: black solid 1px;
-}
-
-#form-one {
-    box-shadow: -4px 8px #1f77dc;
-    border: #fffbf0 solid 1px;
-    > h1 {
-        color: #fffbf0;
-    }
-}
-
-#form-two {
-    box-shadow: -4px 8px #b848ac;
+    overflow-y: auto;
 }
 
 h1 {
-    margin: 1rem;
-    font-size: 3.2rem;
+    margin: 2.8rem;
+    font-size: clamp(2.5rem, 4vw, 3rem);
     line-height: 4rem;
-    color: black;
+    color: var(--dark-color);
 }
 
 .input-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 label {
     font-size: 1.6rem;
-    color: black;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 input {
-    height: 3rem;
-    border: lightgray .5px solid;
-    border-radius: .4rem;
+    height: 4rem;
+    width: 8rem;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
 }
 
-.factorial-result-msg {
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#form-one {
+    border:var(--accent-blue) solid 1px;
+    box-shadow: -4px 8px var(--accent-blue);
+    > h1 {
+        color: var(--light-color);
+    }
+}
+
+#form-one .input-wrapper {
+    color: var(--light-color);
+    > input {
+        border: var(--accent-blue) solid 1px;
+        background: #bdc7d4;
+    }
+}
+
+#form-one button {
+    margin-top: 2rem;
+    height: 4rem;
+    width: 12rem;
+    color: var(--light-color);
+    font-size: clamp(1.6rem, 3vw, 1.8rem);
+    line-height: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 1rem auto;
+    border: var(--accent-blue) solid 1px;
+    background: none;
+    cursor: pointer;
+    transition: all 800ms
+}
+
+#form-one button:hover {
+    background: var(--accent-blue);
+}
+
+#factorial-result-msg {
+    margin: .8rem;
+    color: var(--light-color);
+    font-weight: 600;
+    font-size: clamp(1rem, 3vw, 1.6rem);
+}
+
+.hide {
     display: none;
-    margin: 1rem;
-    color: var(--accent-color);
-    font-weight: 700;
+}
+
+#form-two {
+    border:var(--accent-pink) solid 1px;
+    box-shadow: -4px 8px var(--accent-pink);
+}
+
+#form-two .input-wrapper {
+    color: var(--dark-color);
+    > input {
+        border: var(--accent-pink) solid 1px;
+        background: #e7d0e4;
+    }
+}
+
+#form-two p {
+    margin-top: 3.5rem;
+    font-size: clamp(1rem, 3vw, 1.6rem);
 }
 
 @media(max-width: 889px) {
@@ -124,11 +170,6 @@ input {
     .container {
         min-width: 100%;
         min-height: 50%;
-    }
-
-    .factorial {
-        border-right: none;
-        border-bottom: black solid 2px;
     }
 
     form {
