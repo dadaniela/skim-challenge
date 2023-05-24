@@ -4,24 +4,28 @@ factorialInput.addEventListener("input", onFactorialInput);
 
 function onFactorialInput(){
     let inputValue = parseInt(factorialInput.value)
-    console.log(inputValue)
     let finalResult = factorial(inputValue)
+    console.log(inputValue, finalResult)
     factorialOutput.value = finalResult
+    console.log(inputValue, finalResult)
 }
 
 function factorial(n){
-    let result = 1
-    if (n < 0) {
-        return "error"
+    if (isNaN(n)) {
+        return "";
+    }
+    else if (n < 0) {
+        return "invalid"
     }
     else if (n == 0 || n == 1) {
         return 1;
     }
     else {
+        let result = 1
         while (n > 1) {
             result *= n
             n--
         }
+        return result;  
     }
-    return result;
 }
