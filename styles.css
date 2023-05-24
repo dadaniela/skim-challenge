@@ -12,6 +12,8 @@
     --dark-color: #121212;
     --accent-blue: #1f77dc;
     --accent-pink: #b848ac;
+    --input-bg-blue: #3e6190;
+    --input-bg-pink: #e7d0e4;
 }
 
 header {
@@ -69,7 +71,6 @@ h1 {
     margin: 2rem 0 1rem;
     font-size: clamp(2.5rem, 4vw, 3rem);
     line-height: 4rem;
-    color: var(--dark-color);
 }
 
 .input-wrapper {
@@ -86,10 +87,10 @@ label {
 input {
     height: 4rem;
     width: 8rem;
+    padding: 1rem;
     font-size: 2rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    padding: 1rem;
     text-align: center;
 }
 
@@ -100,48 +101,34 @@ input::-webkit-inner-spin-button {
 #form-one {
     border:var(--accent-blue) solid 1px;
     box-shadow: -4px 8px var(--accent-blue);
-    > h1 {
-        color: var(--light-color);
-    }
 }
 
-#form-one .input-wrapper {
+#form-one h1 {
     color: var(--light-color);
-    > input {
-        border: var(--accent-blue) solid 1px;
-        background: #bdc7d4;
-    }
 }
 
-#form-one button {
+#form-one .input-wrapper label {
+    color: var(--light-color);
+}
+
+#form-one .input-wrapper input {
+    color: var(--light-color);
+    border: var(--accent-blue) solid 1px;
+    background: var(--input-bg-blue);
+}
+
+#form-one output {
     margin-top: 2rem;
+    padding: .8rem;
     height: 4rem;
-    width: 12rem;
-    color: var(--light-color);
-    font-size: clamp(1.6rem, 3vw, 1.8rem);
-    line-height: 3rem;
+    width: 8rem;
+    text-align: center;
+    font-size: 2rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    padding: 1rem auto;
-    border: var(--accent-blue) solid 1px;
-    background: none;
-    cursor: pointer;
-    transition: all 800ms
-}
-
-#form-one button:hover {
-    background: var(--accent-blue);
-}
-
-#factorial-result-msg {
-    margin: .8rem;
     color: var(--light-color);
-    font-weight: 600;
-    font-size: clamp(1rem, 3vw, 1.6rem);
-}
-
-.hide {
-    display: none;
+    border: var(--accent-blue) solid 1px;
+    background: var(--input-bg-blue);
 }
 
 #form-two {
@@ -149,12 +136,9 @@ input::-webkit-inner-spin-button {
     box-shadow: -4px 8px var(--accent-pink);
 }
 
-#form-two .input-wrapper {
-    color: var(--dark-color);
-    > input {
-        border: var(--accent-pink) solid 1px;
-        background: #e7d0e4;
-    }
+#form-two .input-wrapper input {
+    border: var(--accent-pink) solid 1px;
+    background:var(--input-bg-pink);
 }
 
 #form-two p {
