@@ -128,7 +128,8 @@ input::-webkit-inner-spin-button {
     font-weight: 600;
     color: var(--light-color);
     border: var(--accent-blue) solid 1px;
-    background: var(--input-bg-blue);
+    /* background: var(--input-bg-blue); */
+    cursor: default;
 }
 
 #form-two {
