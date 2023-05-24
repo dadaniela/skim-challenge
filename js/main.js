@@ -5,9 +5,7 @@ factorialInput.addEventListener("input", onFactorialInput);
 function onFactorialInput(){
     let inputValue = parseInt(factorialInput.value)
     let finalResult = factorial(inputValue)
-    console.log(inputValue, finalResult)
     factorialOutput.value = finalResult
-    console.log(inputValue, finalResult)
 }
 
 function factorial(n){
