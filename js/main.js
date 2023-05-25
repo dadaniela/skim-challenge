@@ -40,16 +40,18 @@ function onFizzbuzzInput(){
 };
 
 function fizzbuzz(userInput){
-    let i;
-    for (i = 1; i <= userInput; i++){
-        if (i % 15 == 0 && i > 0){
-            console.log("SKIM is a great place to work!!");
+    const firstMsg = "SKIM";
+    const secondMsg = "is a great place to work!!";
+
+    for (let i = 1; i <= userInput; i++){
+        if (i % 15 == 0){
+            console.log(`${firstMsg} ${secondMsg}`);
         }
         else if (i % 3 == 0){
-            console.log("SKIM");
+            console.log(firstMsg);
         }
         else if (i % 5 == 0){
-            console.log("is a great place to work!!");
+            console.log(secondMsg);
         }
         else{
             console.log(i)
