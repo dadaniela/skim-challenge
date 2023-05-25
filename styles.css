@@ -14,6 +14,7 @@
     --accent-pink: #b848ac;
     --input-bg-blue: #3e6190;
     --input-bg-pink: #e7d0e4;
+    --input-placeholder: rgba(136, 136, 127, .5);
 }
 
 header {
@@ -115,6 +116,10 @@ input::-webkit-inner-spin-button {
     color: var(--light-color);
     border: var(--accent-blue) solid 1px;
     background: var(--input-bg-blue);
+}
+
+::placeholder {
+    color: var(--input-placeholder);
 }
 
 #form-one output {
