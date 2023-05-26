@@ -81,7 +81,7 @@ h1 {
 }
 
 label {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
     margin-bottom: 1.5rem;
 }
 
@@ -96,7 +96,7 @@ input {
 }
 
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  -webkit-appearance: none;  
 }
 
 #form-one {
@@ -133,7 +133,6 @@ input::-webkit-inner-spin-button {
     font-weight: 600;
     color: var(--light-color);
     border: var(--accent-blue) solid 1px;
-    /* background: var(--input-bg-blue); */
     cursor: default;
 }
 
@@ -160,7 +159,6 @@ input::-webkit-inner-spin-button {
     }
 
     .container {
-        min-width: 100%;
         min-height: 50%;
     }
 
