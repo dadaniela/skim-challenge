@@ -60,7 +60,7 @@ main {
 
 form {
     width: clamp(15rem, 35vw, 40rem);
-    height: clamp(20rem, 40vh, 40rem);
+    height: clamp(20rem, 40vh, 30rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +69,7 @@ form {
 }
 
 h1 {
-    margin: 2rem 0 1rem;
+    margin: 2rem 0 1.5rem;
     font-size: clamp(2.5rem, 4vw, 3rem);
     line-height: 4rem;
 }
@@ -147,7 +147,7 @@ input::-webkit-inner-spin-button {
 }
 
 #form-two p {
-    margin: 4rem auto 3rem;
+    margin: 3rem auto 3rem;
     font-size: clamp(1rem, 3vw, 1.6rem);
     line-height: 2.5rem;
 }
