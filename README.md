@@ -1,6 +1,6 @@
 # SKIM challenge
 
-## [This page](http://dadaniela.github.io/skim-challenge) consists of 2 coding problems and a bonus challenge that requires the page to be responsive with one challenge next to the other. The coding problems have a set of specifications sent to me via email that are not disclosed here.
+### [This page](http://dadaniela.github.io/skim-challenge) consists of 2 coding problems and a bonus challenge that requires the page to be responsive with one challenge next to the other. The coding problems have a set of specifications sent to me via email that are not disclosed here.
 
 ### Process
 
