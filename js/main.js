@@ -7,37 +7,37 @@ import {
 factorialInput.addEventListener("input", onFactorialInput);
 
 function onFactorialInput(){
-    let inputValue = parseInt(factorialInput.value)
-    let finalResult = factorial(inputValue)
-    factorialOutput.value = finalResult
-};
+    const factValue = parseInt(factorialInput.value);
+    const finalResult = factorial(factValue);
+    factorialOutput.value = finalResult;
+}
 
 function factorial(n){
     if (isNaN(n)) {
         return "";
     }
     else if (n < 0) {
-        return "invalid"
+        return "invalid";
     }
     else if (n == 0 || n == 1) {
         return 1;
     }
     else {
-        let result = 1
+        let result = 1;
         while (n > 1) {
             result *= n
             n--
         }
-        return result;  
+        return result;
     }
-};
+}
 
 fizzbuzzInput.addEventListener("input", onFizzbuzzInput);
 
 function onFizzbuzzInput(){
-    let inputValue = parseInt(fizzbuzzInput.value)
-    fizzbuzz(inputValue)
-};
+    const fbValue = parseInt(fizzbuzzInput.value);
+    fizzbuzz(fbValue);
+}
 
 function fizzbuzz(userInput){
     const firstMsg = "SKIM";
@@ -53,8 +53,8 @@ function fizzbuzz(userInput){
         else if (i % 5 == 0){
             console.log(secondMsg);
         }
-        else{
-            console.log(i)
+        else {
+            console.log(i);
         }
     }
-};
+}
